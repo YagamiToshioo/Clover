@@ -1,21 +1,4 @@
-<?php
-/*
-copyright @ medantechno.com
-Modified by Ilyasa
-2017
-*/
-require_once('./line_class.php');
-
-$channelAccessToken = 'D9a/QCVaAtse1+NGys5Jpqs95kyN9Y+sxqyPiMT/wxNELWXXqqT87V7YiWXsfrXEoDG5BnreW5LcnunFWpjWve/aWbu0Cjq8b63dUYorc4zTiWaDiGb6Ueev/ZL2RhQfgaCwhd4CLEs2vDrO5nSUWQdB04t89/1O/w1cDnyilFU='; //Your Channel Access Token
-$channelSecret = 'ab8f924bed71417feb058ce1c1464193';//Your Channel Secret
-
-$client = new LINEBotTiny($channelAccessToken, $channelSecret);
-
-$userId 	= $client->parseEvents()[0]['source']['userId'];
-$replyToken = $client->parseEvents()[0]['replyToken'];
-$message 	= $client->parseEvents()[0]['message'];
-$profil = $client->profil($userId);
-$if($message['type']=='sticker')
+if($message['type']=='sticker')
 
 url = "https://www.cleverbot.com/getreply";
 key = "CC6a2Wzi4dqrDF0c-GdaQTGdN6Q";
