@@ -15,10 +15,8 @@ $userId 	= $client->parseEvents()[0]['source']['userId'];
 $replyToken = $client->parseEvents()[0]['replyToken'];
 $message 	= $client->parseEvents()[0]['message'];
 $profil = $client->profil($userId);
-$pesan_datang = $message['text'];
+$if($message['type']=='sticker')
 
-if($message['type']=='sticker')
-<script>
 url = "https://www.cleverbot.com/getreply";
 key = "CC6a2Wzi4dqrDF0c-GdaQTGdN6Q";
 input = encodeURIComponent ("How are you?");
